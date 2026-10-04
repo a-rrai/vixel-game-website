@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #D8DBE2; 
+  color: #1B1B1E;          
+  line-height: 1.6;
+}
+
+.beranda {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #373F51; 
+  color: #D8DBE2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #58A4B0; 
+  text-align: left;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-list li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.menu-list li a, 
+.menu-list li {
+  color: #D8DBE2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-list li a:hover {
+  color: #58A4B0; 
+}
+
+.koleksi-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.koleksi-section > h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #373F51;
+  margin-bottom: 1rem;
+}
+
+.carousel-header-top25-game,
+.carousel-header-sad-game {
+  background-color: #A9BCD0; 
+  padding: 2rem;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(55, 63, 81, 0.08);
+}
+
+.carousel-header-top25-game h2,
+.carousel-header-sad-game h2 {
+  grid-column: 1 / -1; 
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #373F51;
+  text-align: left;
+  border-bottom: 2px solid #58A4B0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  background-color: #D8DBE2;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(55, 63, 81, 0.2);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;   
+    object-fit: cover;     
+    border-radius: 8px;
+  }
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #373F51;
+  text-align: left;
+}
+
+.card p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #1B1B1E;
+  text-align: justify; 
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+    border-top: 1px solid rgba(216, 219, 242, 0.2);
+    padding-top: 0.8rem;
+  }
+
+  .koleksi-section > h1 {
+    font-size: 1.7rem;
+  }
+
+  .beranda {
+    padding: 10px;
+  }
+}
