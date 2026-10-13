@@ -9,7 +9,7 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: #D8DBE2; 
-  color: #1B1B1E;          
+  color: #1B1B1E;           
   line-height: 1.6;
 }
 
@@ -60,6 +60,11 @@ body {
 
 .menu-list li a:hover {
   color: #58A4B0; 
+}
+
+.menu-list li a.active {
+  color: #58A4B0;
+  font-weight: 600;
 }
 
 .koleksi-section {
@@ -116,11 +121,11 @@ body {
 }
 
 .card img {
-    width: 100%;
-    aspect-ratio: 3 / 4;   
-    object-fit: cover;     
-    border-radius: 8px;
-  }
+  width: 100%;
+  aspect-ratio: 3 / 4;   
+  object-fit: cover;    
+  border-radius: 8px;
+}
 
 .card h3 {
   font-size: 1.1rem;
@@ -141,6 +146,378 @@ body {
   text-decoration: none;
 }
 
+/*login.html*/
+
+.login-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-header h2 {
+  font-size: 1.5rem;
+  color: #373F51;
+  font-weight: 700;
+  border-bottom: 2px solid #58A4B0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-header p {
+  font-size: 0.9rem;
+  color: #1B1B1E;
+  font-weight: 300;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #373F51;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #A9BCD0;
+  border-radius: 8px;
+  background-color: #D8DBE2;
+  color: #1B1B1E;
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+  border-color: #58A4B0;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.form-options label {
+  color: #1B1B1E;
+  cursor: pointer;
+}
+
+.form-options a {
+  color: #58A4B0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #373F51;
+  color: #D8DBE2;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.btn-submit:hover {
+  background-color: #58A4B0;
+  color: #1B1B1E;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #1B1B1E;
+}
+
+.login-footer a {
+  color: #58A4B0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* about.html */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-hero {
+  background-color: #A9BCD0;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(55, 63, 81, 0.08);
+}
+
+.about-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #373F51;
+  margin-bottom: 0.5rem;
+}
+
+.about-tagline {
+  font-size: 1.1rem;
+  color: #1B1B1E;
+  font-weight: 400;
+}
+
+.about-section {
+  background-color: #A9BCD0;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(55, 63, 81, 0.08);
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #373F51;
+  border-bottom: 2px solid #58A4B0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color: #1B1B1E;
+  text-align: justify;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-card {
+  background-color: #A9BCD0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 4px 12px rgba(55, 63, 81, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(55, 63, 81, 0.2);
+}
+
+.about-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #373F51;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #1B1B1E;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* detail_game.html */
+
+.back-navigation {
+  margin-bottom: 1.5rem;
+}
+
+.btn-back {
+  color: #373F51;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+  color: #58A4B0;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.game-hero {
+  background-color: #A9BCD0;
+  padding: 2rem;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  box-shadow: 0 4px 12px rgba(55, 63, 81, 0.08);
+  align-items: start;
+}
+
+.poster-box {
+  width: 100%;
+}
+
+.detail-poster {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mood-tag {
+  background-color: #373F51;
+  color: #D8DBE2;
+}
+
+.genre-tag {
+  background-color: #58A4B0;
+  color: #1B1B1E;
+}
+
+.game-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #373F51;
+  margin-bottom: 0;
+}
+
+.game-meta {
+  font-size: 0.95rem;
+  color: #1B1B1E;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.action-box {
+  margin: 0.5rem 0;
+}
+
+.btn-wishlist {
+  background-color: #373F51;
+  color: #D8DBE2;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-wishlist:hover {
+  background-color: #58A4B0;
+  color: #1B1B1E;
+}
+
+.synopsis h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #373F51;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #58A4B0;
+  padding-bottom: 0.3rem;
+}
+
+.synopsis p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #1B1B1E;
+  text-align: justify;
+}
+
+.mood-reason-section {
+  background-color: #A9BCD0;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(55, 63, 81, 0.08);
+}
+
+.mood-reason-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #373F51;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #58A4B0;
+  padding-bottom: 0.3rem;
+}
+
+.mood-reason-section p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #1B1B1E;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+/* media query */
+
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -157,8 +534,8 @@ body {
     padding-top: 0.8rem;
   }
 
-  .koleksi-section > h1 {
-    font-size: 1.7rem;
+  .game-hero {
+    grid-template-columns: 1fr;
   }
 
   .beranda {
